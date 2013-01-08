@@ -1,0 +1,89 @@
+
+    <div id="main">
+    	<div class="container">
+        
+        	<div id="header">
+            
+            	<ul id="menu">
+                	
+                	<li><a href="">Hi <?php echo $user['login'];?></a></li>   
+                </ul>
+                
+            	<div id="logo">
+                	
+                </div>
+            
+            </div>
+            
+            
+            <div id="block_content">
+            
+            	<div id="content_area" class="block">
+                    <div class="block_inside">
+                     <form action="test.php?iduser=<?php echo $iduser?>" method="POST">
+                        <h4>Intrebare 1</h4>                        	
+    					<textarea class="intr" name="intr1"></textarea>
+                        <h4>Raspuns:</h4>                        	
+    					<textarea class="rs" name="rs1"></textarea><br />
+                        <br /><h4>Intrebare 2</h4>                        	
+    					<textarea class="intr" name="intr2"></textarea>
+                        <h4>Raspuns:</h4>                        	
+    					<textarea class="rs" name="rs2"></textarea><br />
+                        <br /><h4>Intrebare 3</h4>                        	
+    					<textarea class="intr" name="intr3"></textarea>
+                        <h4>Raspuns:</h4>                        	
+    					<textarea class="rs" name="rs3"></textarea>
+                    </div>
+                 </div>
+                 <div id="sidebar">
+     				
+                 	<div class="block_inside">
+                    
+                    	<h3>Programarea WEB</h3>
+                        
+                        <ul>
+                        	<li>Test 1</li>
+                        	<li>Profesor: Delimanschi Natalia</li>
+                        	<li></li>
+                            
+                        	
+						</ul>  
+                        
+                        
+                        <span class="note">Apreciazate:<select name="nota_std">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option></select> </span>
+                        <br />
+                       
+                       <h3> Timer: <?php
+                          include "timer.htm";
+                        ?>                        
+                        </h3>
+                        
+                        <input type="submit"  value="Trimite"/>
+                 	</form>
+                    </div>
+                 </div>
+                 
+                 
+                 <div style="clear:both"></div>
+                   
+            </div>
+            
+            
+            
+            </div>
+            
+            
+        </div>
+    </div>
+
+  
