@@ -1,8 +1,4 @@
 package Chart;
-/**
-   @version 1.31 2002-07-06
-   @author Cay Horstmann
-*/
 
 import java.awt.*;
 import javax.swing.*;
