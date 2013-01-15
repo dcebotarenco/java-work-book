@@ -1,0 +1,4 @@
+Core Java 2: Fundamentals
+Cay Horstmann and Gary Cornell
+Copyright ?000
+Sun Microsystems Press

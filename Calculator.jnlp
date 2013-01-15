@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="localhost:8080/calculator.dev/www/" href="Calculator.jnlp">
+<information>
+	<title>Calculator Demo Application</title>
+	<vendor>Cebotarenco Dan</vendor>
+	<description>A Calculator</description>
+	<offline-allowed>
+</information>
+<resourses>
+	<j2s3 version="5.0+"/>
+	<jar href="Calculator.jar"/>
+</resourses>
+<application-desc>
+</jnlp>
