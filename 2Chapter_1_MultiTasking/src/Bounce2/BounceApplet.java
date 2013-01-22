@@ -1,4 +1,4 @@
-package BounceThread;
+package Bounce2;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -22,7 +22,7 @@ public class BounceApplet extends JApplet
 		panel = new BallPanel();
 		add(panel, BorderLayout.CENTER);
 		JPanel buttonPanel = new JPanel();
-		addButton(buttonPanel,"Start",new ActionListener() {
+		addButton(buttonPanel,"Add",new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -30,14 +30,24 @@ public class BounceApplet extends JApplet
 				addBall();
 			}
 		});
-		addButton(buttonPanel, "Close", new ActionListener() {
+		addButton(buttonPanel, "Clear", new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+				//System.exit(0);
+				panel.makeZero();
 			}
 		});
+		/*addButton(buttonPanel, "Cancel", new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+				
+			}
+		});*/
 		add(buttonPanel, BorderLayout.SOUTH);
 	}
 	

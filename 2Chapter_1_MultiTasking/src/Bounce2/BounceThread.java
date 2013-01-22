@@ -1,4 +1,4 @@
-package BounceThread;
+package Bounce2;
 
 import javax.swing.JFrame;
 

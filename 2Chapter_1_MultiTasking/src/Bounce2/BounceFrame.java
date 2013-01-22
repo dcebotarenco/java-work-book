@@ -1,4 +1,4 @@
-package BounceThread;
+package Bounce2;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
