@@ -39,5 +39,9 @@ public class BallPanel extends JPanel
 		}
 	}
 	
+	public void makeZero()
+	{
+		balls.clear();
+	}
 	private static ArrayList<Ball> balls = new ArrayList<Ball>();
 }
