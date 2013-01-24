@@ -2,6 +2,7 @@ package Bounce2;
 
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 
 /**
  * Miscarea Bilei la irmatoarea pozitie.
@@ -11,10 +12,22 @@ import java.awt.geom.Rectangle2D;
  */
 public class Ball 
 {
-	public void move(Rectangle2D bounds)
+	public void move(Rectangle2D bounds,ArrayList<Ball> balls)
 	{
 		x += dx;
 		y += dy;
+		
+		if(balls.size() > 1)
+		{
+			
+			DIST=getDistance(balls);	
+			if(DIST < XSIZE)
+			{
+				dx = -dx;
+				dy = -dy;
+			}
+		}
+		
 		
 		if(x < bounds.getMinX())
 		{
@@ -46,11 +59,23 @@ public class Ball
 		return new Ellipse2D.Double(x, y, XSIZE, YSIZE);
 	}
 	
+	public Double getDistance(ArrayList<Ball> balls)
+	{
+		Double distance;
+			distance = Math.sqrt( Math.pow(
+					(balls.get(1).x - balls.get(0).x), 2)    
+					+ Math.pow(
+					(balls.get(1).y - balls.get(0).y), 2)    
+					);
+		return distance;
+	}
+
 	private static final int XSIZE = 15;
 	private static final int YSIZE = 15;
 	private double x = 0;
 	private double y = 0;
 	private double dx = 1;
 	private double dy = 1;
+	private double DIST = 0;
 			
 }

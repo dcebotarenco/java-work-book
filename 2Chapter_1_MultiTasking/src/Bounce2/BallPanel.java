@@ -39,9 +39,17 @@ public class BallPanel extends JPanel
 		}
 	}
 	
+	
+	public ArrayList<Ball> getBalls()
+	{
+		return balls;
+	}
+	
 	public void makeZero()
 	{
 		balls.clear();
 	}
 	private static ArrayList<Ball> balls = new ArrayList<Ball>();
+
+	public static final int DIAMETER = 15;
 }

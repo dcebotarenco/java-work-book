@@ -1,7 +1,5 @@
 package Bounce2;
 
-import java.awt.Component;
-
 /**
  * Class Runnable ce contine miscarea bilei
  * @author Dan
@@ -14,7 +12,7 @@ public class BallRunnable implements Runnable
 	 * @param aball Bila
 	 * @param panel Component unde se afla BIla
 	 */
-	public BallRunnable(Ball aBall,Component aComponent)	
+	public BallRunnable(Ball aBall,BallPanel aComponent)	
 	{
 		ball = aBall;
 		component = aComponent;
@@ -27,7 +25,7 @@ public class BallRunnable implements Runnable
 		{
 			for(int i = 1;i<=STEPS; i++)
 			{
-				ball.move(component.getBounds());
+				ball.move(component.getBounds(),component.getBalls());
 				component.repaint();
 				Thread.sleep(DELAY);
 			}
@@ -39,7 +37,7 @@ public class BallRunnable implements Runnable
 	}
 	
 	private Ball ball;
-	private Component component;
+	private BallPanel component;
 	public static final int STEPS = 100000;
-	public static final int DELAY = 5;
+	public static final int DELAY = 3;
 }

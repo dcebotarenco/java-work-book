@@ -21,14 +21,14 @@ public class problema_2
 		 */
 		Scanner in = new Scanner(System.in);
 		
-		int[] arrayOfNums = new int[4];
+		int[] arrayOfNums = new int[3];
 		System.out.print("Enter Array:");
         for(int i=0;i<arrayOfNums.length;i++)
         {	                
         	arrayOfNums[i]=in.nextInt();	                
         } 
 	        
-	 int combs=3;  
+	 int combs=2;  
 	 int n=arrayOfNums.length;
 	 	System.out.print("Permutations of your Array:\n");
 	    permutationFunction(arrayOfNums,0,n);
