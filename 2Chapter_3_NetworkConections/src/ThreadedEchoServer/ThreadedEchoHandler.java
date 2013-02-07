@@ -43,9 +43,10 @@ public class ThreadedEchoHandler implements Runnable
 				boolean done = false;
 				while(!done &&  in.hasNextLine())
 				{
+					String forSend = conlose.nextLine();
 					String line = in.nextLine();
 					System.out.println(line);
-					String forSend = conlose.nextLine();
+					
 					out.println(forSend);
 					if(line.trim().equals("BYE"))
 					{

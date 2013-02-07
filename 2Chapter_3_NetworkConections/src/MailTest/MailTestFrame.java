@@ -4,6 +4,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -47,11 +48,13 @@ public class MailTestFrame extends JFrame
 		add(password, new GBC(1,2).setFill(GBC.HORIZONTAL).setWeight(100, 0));
 		
 		message = new JTextArea();
+		message.append("Enter Message");
 		add(new JScrollPane(message), new GBC(0,3,2,1)
 								.setFill(GBC.BOTH)
 								.setWeight(100, 100));
 		
 		comm =new JTextArea();
+		comm.setEditable(false);
 		add(new JScrollPane(comm), new GBC(0,4,2,1)
 								.setFill(GBC.BOTH)
 								.setWeight(100, 0));
@@ -75,12 +78,17 @@ public class MailTestFrame extends JFrame
 						try 
 						{
 							GoogleMail.Send(from.getText(), pass, to.getText(), "", message.getText());
-							comm.append("Mail Sent");
 						} 
-						catch (MessagingException e) 
+						catch (AddressException e) 
+						{
+							e.printStackTrace();
+						} 
+						catch (MessagingException e)
 						{
 							e.printStackTrace();
 						}
+						comm.append("");
+						comm.append("Mail Sent");
 						
 					}
 				}).start();
